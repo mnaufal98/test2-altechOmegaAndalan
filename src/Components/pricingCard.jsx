@@ -39,7 +39,7 @@ export default function PricingCard() {
     <>
       {tier.map((value, index) => {
         return (
-          <div key={index} className="flex flex-col justify-between w-[450px] border rounded-xl p-10 shadow-lg">
+          <div key={index} className="flex flex-col justify-between  md:w-[450px] border rounded-xl p-10 shadow-lg">
             <div>
               <div className="text-4xl">{value.name}</div>
               <div style={{color: `${value?.color}`}} className={`text-6xl mt-5`}>
@@ -47,7 +47,7 @@ export default function PricingCard() {
               </div>
               <div className="flex justify-end">/ user / month</div>
               <div className="mt-7">
-                <ul className="list-disc list-inside text-xl">
+                <ul className="list-disc list-insid text-xl">
                   {value.features.map((value, index) => {
                     return <li key={index}>{value}</li>;
                   })}

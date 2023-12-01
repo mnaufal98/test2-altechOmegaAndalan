@@ -11,39 +11,40 @@ import {
 import LoginModal from '../Components/loginModal';
 
 export default function Home() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   return (
     <>
-      <Navbar func={setOpen } />
-      <div className="flex justify-end mr-[250px] mt-[130px]">
+      <Navbar func={setOpen} />
+      <div className="flex justify-end md:mr-[250px] mt-[130px]">
         <p className="w-[690px] text-xl text-center leading-loose text-slate-600 font-medium">
-        Each app simplifies a process and empowers more people.
-Imagine the impact when everyone gets the right tool for the job, with perfect integration.
+          Each app simplifies a process and empowers more people. Imagine the
+          impact when everyone gets the right tool for the job, with perfect
+          integration.
         </p>
       </div>
       <div className="mt-[130px] ml-16">
         <p className="text-2xl italic font-medium text-slate-700">
-          " All your business on one platform.
-Simple, efficient, yet affordable! "
+          " All your business on one platform. Simple, efficient, yet
+          affordable! "
         </p>
       </div>
       <div className="relative">
         <img
-          className="ml-20 mt-[100px] w-[350px]"
+          className="xl:ml-20 mt-[100px] w-[350px] hidden md:flex"
           alt="gambar"
           src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTo-ndaFRERDQuxK0wRRBClKq5wD01WTUCFT7OZQ0WbcPunZfS8"
         />
-        <div className="absolute bottom-[-50px] right-0 w-[700px] -z-10">
+        <div className="absolute bottom-[-50px] right-0 w-[500px] md:w-[700px] -z-10">
           <img alt="background-2" src="/Asset 3.PNG" />
         </div>
       </div>
-      <div id='about' className="mt-[80px] relative">
+      <div id="about" className="mt-[80px] relative">
         <img
           className="w-full h-[400px]"
           alt="aboutus"
           src="https://lesprivatbandunghamasah.co.id/wp-content/uploads/2018/02/toronto_slide_1-1.jpg"
         />
-        <p className="text-8xl font-bold absolute top-[150px] left-[500px] text-white tracking-wide">
+        <p className="md:text-8xl text-7xl font-bold absolute top-[0px] md:top-[150px] md:left-[500px] text-white tracking-wide">
           ABOUT US
         </p>
       </div>
@@ -57,7 +58,7 @@ Simple, efficient, yet affordable! "
         services that can help your business reach the optimal stage and provide
         a strong basis for decision making.
       </div>
-      <div className="flex mt-20 bg-[#0c5394]">
+      <div className="flex flex-col md:flex-row mt-20 bg-[#0c5394]">
         <div className="flex-1">
           <img
             className="w-[700px]"
@@ -101,17 +102,17 @@ Simple, efficient, yet affordable! "
           </div>
         </div>
       </div>
-      <div id='pricing' className="mt-10 relative">
+      <div id="pricing" className="mt-10 relative">
         <img
           className="w-full h-[200px]"
           alt="background-1"
           src="/Asset 4.PNG"
         />
-        <p className="text-8xl font-bold absolute top-[50px] left-[500px] text-white tracking-wide">
+        <p className="md:text-8xl text-7xl font-bold absolute top-0 md:top-[50px] md:left-[500px] text-white tracking-wide">
           PRICING
         </p>
       </div>
-      <div className="flex justify-between m-10 gap-5">
+      <div className="flex flex-col md:flex-row justify-between m-10 gap-5">
         <PricingCard />
       </div>
       <div className="text-2xl text-center leading-relaxed">
@@ -132,13 +133,13 @@ Simple, efficient, yet affordable! "
           Schedule a demo
         </button>
       </div>
-      <div id='contact' className="mt-[50px] relative">
+      <div id="contact" className="mt-[50px] relative">
         <img
           className="w-full h-[400px]"
           alt="contactus"
           src="https://media.suara.com/pictures/653x366/2022/08/17/41897-ilustrasi-orang-dewasapexelscom.webp"
         />
-        <p className="text-8xl font-bold absolute top-[150px] left-[500px] text-white tracking-wide">
+        <p className="md:text-8xl text-7xl font-bold absolute top-0 md:top-[150px] md:left-[500px] text-white tracking-wide">
           CONTACT
         </p>
       </div>
@@ -148,7 +149,7 @@ Simple, efficient, yet affordable! "
       <div className="text-center text-xl text-slate-700 mt-16">
         Start Building Your Success From Now
       </div>
-      <div className="flex m-10">
+      <div className="flex flex-col md:flex-row m-10">
         <div className="flex-1">
           <div className="flex flex-col">
             <div className="text-3xl mt-5">First Name*</div>
@@ -198,7 +199,7 @@ Simple, efficient, yet affordable! "
             </button>
           </div>
         </div>
-        <div className="flex-1 ml-14 ">
+        <div className="flex-1 md:ml-14 ">
           <div className="text-4xl mt-5">AOA Indonesia</div>
           <div className="text-2xl my-14">Phone: +62 812 9766 6527</div>
           <div className="text-2xl">
@@ -223,10 +224,10 @@ Simple, efficient, yet affordable! "
           </div>
         </div>
       </div>
-      <div className='text-xl text-center bg-[#0c5394] py-5'>
-      Copyright © 2022 AOA Indonesia. All Rights Reserved.
+      <div className="text-xl text-center bg-[#0c5394] py-5">
+        Copyright © 2022 AOA Indonesia. All Rights Reserved.
       </div>
-      <LoginModal show={open} funcShow={setOpen } />
+      <LoginModal show={open} funcShow={setOpen} />
     </>
   );
 }
